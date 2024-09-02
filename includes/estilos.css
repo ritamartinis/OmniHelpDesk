@@ -1,0 +1,621 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('http://omnihelpdesk.pt/includes/fotosdiversas/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+/*titulos */
+.titulo-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+    display: inline-block;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+
+/* css para classe flex-body */
+.flex-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* container branco do login */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* logo no container de login */
+.login-logo {
+    margin-right: 5px;
+    /* Espaço entre a imagem e o formulário */
+}
+
+.login-logo img {
+    width: 400px;
+    height: auto;
+}
+
+/* formulário no container do login */
+.login-form {
+    width: 250px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* inputs no formulário */
+.input-group input {
+    width: calc(100% - 2px) !important;
+    padding: 8px;
+    background-color: #ccc !important;
+    /* Altera o fundo para cinza */
+    border: 2px solid transparent;
+    /* Adiciona uma borda transparente */
+    border-radius: 25px;
+}
+
+/* borda verde quando o input estiver selecionado */
+.input-group input:focus {
+    border-color: #57ca85 !important;
+    outline: none;
+    padding: 14px;
+}
+
+/* botão de login */
+.login-button {
+    background-color: #57ca85;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+/* links "Criar conta" e "Iniciar sessão" */
+.create-account,
+.text-center a {
+    display: block;
+    margin-top: 15px;
+    color: #6a63b6;
+    text-decoration: none;
+}
+
+.create-account:hover,
+.text-center a:hover {
+    color: #57ca85;
+}
+
+/* css para as labels */
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+
+/*NAVBAR - todas */
+.navbar .nav-link img {
+    width: 45px !important;
+    height: auto !important;
+}
+
+/* imagem do cliente */
+.user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: #57ca85;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #98FB98;
+    background-color: #333;
+    text-decoration: none;
+}
+
+/* ícone de logout */
+.logout-icon {
+    color: #57ca85;
+}
+
+.navbar-brand {
+    color: #57ca85 !important;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #98FB98 !important;
+}
+
+
+/* css GERAL para todos os cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    /*transparência*/
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.card-subtitle {
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.card-link {
+    margin-right: 5px;
+}
+
+/* especie de hr a separar dentro dos cards */
+.card-body .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 15px 0;
+    display: block;
+}
+
+/*css para os ESTADOS das contas dos utilizadores */
+.estado_conta {
+    border-radius: 20px;
+    min-width: 60px !important;
+    max-width: 100px !important;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 10px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.estado_conta.Ativa {
+    background-color: green;
+}
+
+.estado_conta.Desativa {
+    background-color: grey;
+}
+
+/* Estilos para o card desativado */
+.card.card-desativa {
+    background-color: #f5f5f5;
+    border-color: #dcdcdc;
+    color: #a9a9a9;
+}
+
+.card.card-desativa .card-title,
+.card.card-desativa .card-subtitle,
+.card.card-desativa .card-text {
+    color: #a9a9a9;
+}
+
+/* só o botão "reativar" não fica disabled */
+.card.card-desativa .btn:not(.btn-success) {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/*css para os ESTADOS dos tickets */
+.estado_ticket {
+    border-radius: 20px;
+    min-width: 60px;
+    max-width: 120px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    /* Espaço entre o texto e o estado */
+}
+
+.estado_ticket.Aberto {
+    background-color: #009933;
+}
+
+.estado_ticket.Em_Progresso {
+    background-color: #008080;
+}
+
+.estado_ticket.Aguarda_Resposta {
+    background-color: #e68a00;
+}
+
+.estado_ticket.Fechado {
+    background-color: #246175;
+}
+
+.estado_ticket.Reaberto {
+    background-color: #993366;
+}
+
+.estado_ticket.Cancelado {
+    background-color: #98fb98 !important;
+    /* meter a mesma coisa no grafico */
+}
+
+/* cards dos tickets fechados */
+.card.ticket-fechado {
+    background-color: #f5f5f5;
+    border-color: #dcdcdc;
+    color: #a9a9a9;
+}
+
+.card.ticket-fechado .card-title,
+.card.ticket-fechado .card-subtitle,
+.card.ticket-fechado .card-text {
+    color: #a9a9a9;
+}
+
+.card.ticket-fechado .btn:not(.btn-success):not(.btn-warning):not(.btn-secondary) {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* cards tickets cancelados */
+.card.ticket-cancelado {
+    background-color: #eee;
+    border-color: #ccc;
+    color: #888;
+    position: relative;
+}
+
+.card.ticket-cancelado .card-title,
+.card.ticket-cancelado .card-subtitle,
+.card.ticket-cancelado .card-text {
+    color: #888;
+}
+
+.card.ticket-cancelado .btn:not(.btn-success):not(.btn-danger) {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+/* Adiciona a linha diagonal */
+.card.ticket-cancelado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(136, 136, 136, 0.6) 0%, rgba(136, 136, 136, 0.6) 50%, transparent 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card.ticket-cancelado .card-body {
+    position: relative;
+    z-index: 2;
+}
+
+/*css das PRIORIDADES dos tickets */
+.prioridade_ticket {
+    border-radius: 20px;
+    min-width: 60px;
+    max-width: 120px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    /* Espaço entre o texto e a prioridade */
+}
+
+.prioridade_ticket.Urgente {
+    background-color: #ff0000;
+    /* Vermelho */
+}
+
+.prioridade_ticket.Alta {
+    background-color: #ff8c00;
+    /* Laranja */
+}
+
+.prioridade_ticket.Normal {
+    background-color: #ffd700;
+    /* Amarelo */
+}
+
+.prioridade_ticket.Baixa {
+    background-color: #32cd32;
+    /* Verde */
+}
+
+/* css para o chat de responder a ticket */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.chat-message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-message.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.chat-message.right img {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.chat-bubble {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    /* Cinza claro */
+    max-width: 100%;
+    text-align: left;
+}
+
+.chat-bubble.right {
+    background-color: #014421;
+    /*verde*/
+    color: white;
+}
+
+.chat-timestamp {
+    font-size: 0.8em;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.chat-input-container {
+    margin-top: 20px;
+}
+
+.chat-input {
+    width: 100%;
+    height: 80px;
+}
+
+/* css para a text-area do responder ao ticket */
+.custom-textarea {
+    border-color: #32cd32;
+}
+
+.custom-textarea:focus {
+    border-color: #228b22;
+    box-shadow: none;
+}
+
+
+/*css para TODOS os modais */
+/* borda verde para todos os inputs dentro dos modais */
+.modal input:focus,
+.modal select:focus,
+.modal textarea:focus {
+    border-color: #32cd32 !important;
+    box-shadow: 0 0 0 0.25rem rgba(50, 205, 50, 0.25);
+}
+
+.modal .modal-title {
+    text-align: center;
+}
+
+/*css para os dropdowns */
+/*borda verde para todos os selects */
+.form-select:focus {
+    border-color: #32cd32 !important;
+    box-shadow: 0 0 0 0.25rem rgba(50, 205, 50, 0.25) !important;
+}
+
+/* Define a borda verde para todos os inputs */
+.form-control:focus,
+.form-select:focus {
+    border-color: #32cd32 !important;
+    box-shadow: 0 0 0 0.25rem rgba(50, 205, 50, 0.25) !important;
+}
+
+/* Estilo para as opções do dropdown */
+.form-select option:checked {
+    background-color: #32cd32;
+    color: #fff;
+}
+
+/*css para o filtro */
+.filter-popup {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #000;
+}
+
+.filter-popup .form-select,
+.filter-popup .form-control {
+    width: calc(100% - 20px);
+    padding: 8px;
+    background-color: #ccc;
+    border: 2px solid transparent;
+    border-radius: 25px;
+}
+
+/* borda verde quando o seleccionamos */
+.filter-popup .form-select:focus,
+.filter-popup .form-control:focus {
+    border-color: #57ca85 !important;
+    outline: none;
+    padding: 14px;
+}
+
+.filter-popup .btn-success {
+    background-color: #57ca85;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.filter-popup .btn-center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.filter-popup .btn-success:hover {
+    background-color: #333;
+}
+
+/*caso não haja algo - class error-box */
+.error-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+    display: inline-block;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.error-box p {
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+/*css para a lista de FAQs */
+.accordion-button {
+    background-color: transparent !important;
+    color: #014421;
+    border: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #32cd32 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #014421 !important;
+    background-color: rgba(50, 205, 50, 0.1) !important;
+}
+
+.accordion-button::after {
+    filter: invert(29%) sepia(84%) saturate(300%) hue-rotate(88deg) brightness(94%) contrast(90%);
+}
+
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease-in-out !important;
+}
+
+.accordion-item {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    border: none;
+}
+
+/* Barra de pesquisa das FAQs para técnicos e funcionários */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-container .form-control {
+    border-radius: 30px 0 0 30px !important;
+    border-color: #32cd32 !important;
+    box-shadow: none !important;
+}
+
+.search-container .btn {
+    border-radius: 0 30px 30px 0 !important;
+    background-color: #32cd32 !important;
+    border-color: #32cd32 !important;
+    box-shadow: none !important;
+}
